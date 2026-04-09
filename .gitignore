@@ -3,3 +3,4 @@ package-lock.json
 *.png
 design-tokens.json
 output/
+*.zip
