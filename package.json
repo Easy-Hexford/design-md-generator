@@ -32,6 +32,14 @@
     "style-guide",
     "web-scraping"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Easy-Hexford/design-md-generator.git"
+  },
+  "homepage": "https://github.com/Easy-Hexford/design-md-generator#readme",
+  "bugs": {
+    "url": "https://github.com/Easy-Hexford/design-md-generator/issues"
+  },
   "license": "MIT",
   "dependencies": {
     "puppeteer": "^24.0.0",
