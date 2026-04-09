@@ -1,0 +1,35 @@
+{
+  "name": "design-md-generator",
+  "version": "1.0.0",
+  "description": "Generate DESIGN.md files from any website using Puppeteer to extract design tokens",
+  "main": "src/index.js",
+  "bin": {
+    "design-md-generator": "./src/cli.js"
+  },
+  "files": [
+    "src/**/*.js",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "generate": "node src/cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "echo '✅ design-md-generator installed! Run: design-md-generator <url> to generate a DESIGN.md'"
+  },
+  "keywords": [
+    "design-system",
+    "design-md",
+    "design-tokens",
+    "puppeteer",
+    "css-extraction",
+    "style-guide",
+    "web-scraping"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^24.0.0",
+    "commander": "^13.0.0"
+  }
+}
