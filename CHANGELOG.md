@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.1] - 2026-04-09
+
+- fix: add miniprogram file extensions support (.wxss, .acss, .wxml, .axml, .swan) (196fea1)
+
 ## [1.1.0] - 2026-04-09
 
 - feat: add i18n support for design.md generation (zh/en) (713ce98)
