@@ -11,8 +11,8 @@ const path = require('path');
 // File discovery
 // ============================================================
 
-const STYLE_EXTENSIONS = new Set(['.css', '.scss', '.sass', '.less', '.styl', '.stylus']);
-const TEMPLATE_EXTENSIONS = new Set(['.html', '.htm', '.jsx', '.tsx', '.vue', '.svelte']);
+const STYLE_EXTENSIONS = new Set(['.css', '.scss', '.sass', '.less', '.styl', '.stylus', '.wxss', '.acss']);
+const TEMPLATE_EXTENSIONS = new Set(['.html', '.htm', '.jsx', '.tsx', '.vue', '.svelte', '.wxml', '.axml', '.swan']);
 const CONFIG_FILES = new Set([
   'tailwind.config.js', 'tailwind.config.ts', 'tailwind.config.mjs', 'tailwind.config.cjs',
   'theme.js', 'theme.ts', 'tokens.js', 'tokens.ts', 'tokens.json',
