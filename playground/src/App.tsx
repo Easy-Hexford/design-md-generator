@@ -3,6 +3,7 @@ import { themes, DesignTheme } from '@/data/themes';
 import { products } from '@/data/products';
 import { JDProductList } from '@/components/JDProductList';
 import { TaobaoProductList } from '@/components/TaobaoProductList';
+import { DoubanProductList } from '@/components/DoubanProductList';
 import { DesignInfoPanel } from '@/components/DesignInfoPanel';
 import { Palette, LayoutGrid, Eye } from 'lucide-react';
 
@@ -16,6 +17,8 @@ function App() {
         return <JDProductList products={products} />;
       case 'taobao':
         return <TaobaoProductList products={products} />;
+      case 'douban':
+        return <DoubanProductList products={products} />;
       default:
         return <JDProductList products={products} />;
     }

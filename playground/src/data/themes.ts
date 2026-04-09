@@ -252,8 +252,91 @@ export const taobaoTheme: DesignTheme = {
   },
 };
 
+// Douban (豆瓣) Design Theme
+export const doubanTheme: DesignTheme = {
+  id: 'douban',
+  name: '豆瓣',
+  nameEn: 'Douban',
+  description: '绿色主题、简洁克制、扁平设计的内容社区电商风格',
+  colors: {
+    pageBg: '#ffffff',
+    cardBg: '#ffffff',
+    primaryText: '#000000',
+    secondaryText: '#494949',
+    tertiaryText: '#999999',
+    accent: '#42bd56',
+    accentHover: '#3aaa4d',
+    accentLight: '#f0faf2',
+    price: '#e1251b',
+    priceOriginal: '#b2b2b2',
+    link: '#42bd56',
+    success: '#42bd56',
+    navBg: '#ffffff',
+    navText: '#000000',
+    border: '#efefef',
+    badgeBg: '#42bd56',
+    badgeText: '#ffffff',
+    promotionBg: '#f0faf2',
+  },
+  typography: {
+    fontFamily: 'system-ui, -apple-system, "PingFang SC", "Helvetica Neue", sans-serif',
+    priceFont: 'system-ui, -apple-system, "PingFang SC", sans-serif',
+    headingWeight: 700,
+    bodyWeight: 400,
+    priceWeight: 700,
+    sizes: {
+      hero: '24px',
+      sectionHeading: '18px',
+      subHeading: '16px',
+      productTitle: '14px',
+      priceLarge: '20px',
+      priceSmall: '12px',
+      body: '14px',
+      caption: '12px',
+    },
+  },
+  components: {
+    card: {
+      borderRadius: '5px',
+      shadow: 'none',
+      hoverShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
+      border: '1px solid #efefef',
+      padding: '0',
+    },
+    button: {
+      borderRadius: '5px',
+      padding: '8px 20px',
+      fontWeight: 700,
+      background: '#42bd56',
+      hoverBackground: '#3aaa4d',
+    },
+    badge: {
+      borderRadius: '3px',
+      padding: '2px 6px',
+      fontSize: '11px',
+    },
+    searchInput: {
+      borderRadius: '5px',
+      background: '#ffffff',
+      border: '1px solid #efefef',
+    },
+  },
+  layout: {
+    maxWidth: '1120px',
+    gridColumns: 4,
+    gap: '16px',
+    baseUnit: 8,
+    style: 'grid',
+  },
+  shadows: {
+    subtle: 'none',
+    standard: 'none',
+    elevated: '0 2px 8px rgba(0, 0, 0, 0.08)',
+  },
+};
+
 // All available themes
-export const themes: DesignTheme[] = [jdTheme, taobaoTheme];
+export const themes: DesignTheme[] = [jdTheme, taobaoTheme, doubanTheme];
 
 export function getThemeById(id: string): DesignTheme | undefined {
   return themes.find(t => t.id === id);
