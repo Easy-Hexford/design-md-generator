@@ -1,5 +1,11 @@
 # Changelog
 
+
+## [1.1.2] - 2026-04-09
+
+- fix: release script should ignore untracked files when checking uncommitted changes (906e9cf)
+- docs: add how-it-works documentation for design.md generation principles (d3e99e5)
+
 ## [1.1.1] - 2026-04-09
 
 - fix: add miniprogram file extensions support (.wxss, .acss, .wxml, .axml, .swan) (196fea1)

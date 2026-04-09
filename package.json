@@ -1,6 +1,6 @@
 {
   "name": "design-md-generator",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Generate DESIGN.md files from any website using Puppeteer to extract design tokens",
   "main": "src/index.js",
   "bin": {
