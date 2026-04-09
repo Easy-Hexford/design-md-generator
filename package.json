@@ -16,7 +16,12 @@
   "scripts": {
     "generate": "node src/cli.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "echo '✅ design-md-generator installed! Run: design-md-generator <url> to generate a DESIGN.md'"
+    "postinstall": "echo '✅ design-md-generator installed! Run: design-md-generator <url> to generate a DESIGN.md'",
+    "release": "./scripts/release.sh",
+    "release:patch": "./scripts/release.sh patch",
+    "release:minor": "./scripts/release.sh minor",
+    "release:major": "./scripts/release.sh major",
+    "release:dry": "./scripts/release.sh patch --dry-run"
   },
   "keywords": [
     "design-system",
