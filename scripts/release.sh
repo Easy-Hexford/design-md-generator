@@ -40,10 +40,10 @@ done
 echo -e "${BLUE}🚀 Starting release process...${NC}"
 echo -e "${BLUE}   Bump type: ${YELLOW}${BUMP_TYPE}${NC}"
 
-# Check for uncommitted changes
-if [[ -n $(git status --porcelain) ]]; then
+# Check for uncommitted changes (ignore untracked files)
+if [[ -n $(git diff --name-only HEAD) ]] || [[ -n $(git diff --cached --name-only) ]]; then
   echo -e "${RED}❌ Error: You have uncommitted changes. Please commit or stash them first.${NC}"
-  git status --short
+  git status --short -uno
   exit 1
 fi
 
