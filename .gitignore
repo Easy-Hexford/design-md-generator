@@ -2,7 +2,5 @@ node_modules/
 package-lock.json
 .DS_Store
 .codebuddy/
-*.png
-design-tokens.json
 output/
 *.zip

@@ -118,6 +118,28 @@ design-md local ./my-project -i "src/styles" "src/theme"
 | **元信息** | 页面标题、描述、主题色、深色/浅色模式检测 | 从 package.json 读取项目信息 |
 | **Tailwind** | — | 自动检测并解析 tailwind.config.* 配置 |
 
+## Playground 对比效果
+
+基于同一组商品数据，使用从不同网站提取的 `DESIGN.md` 设计令牌，渲染出三种截然不同的视觉风格：
+
+### 京东风格（JD.com）
+
+<img src="./assets/playground-jd.png" width="720" />
+
+> 红色主题 · 信息密集 · 网格布局 · 强促销导向
+
+### 淘宝风格（Taobao）
+
+<img src="./assets/playground-taobao.png" width="720" />
+
+> 橙色主题 · 温暖圆润 · 瀑布流布局 · 发现式购物
+
+### 豆瓣风格（Douban）
+
+<img src="./assets/playground-douban.png" width="720" />
+
+> 绿色主题 · 简洁克制 · 扁平设计 · 内容社区电商
+
 ## 输出格式（9 大章节）
 
 生成的 `DESIGN.md` 遵循标准的 9 章节格式：
