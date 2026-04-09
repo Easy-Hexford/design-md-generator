@@ -23,6 +23,7 @@ async function generateDesignMdFromUrl(url, options = {}) {
     screenshot = false,
     outputJson = false,
     waitForSelector = null,
+    lang = 'zh',
   } = options;
 
   // Determine output directory
@@ -47,8 +48,8 @@ async function generateDesignMdFromUrl(url, options = {}) {
   const resolvedSiteName = siteName || deriveSiteName(url, tokens);
 
   // Step 3: Generate DESIGN.md content
-  console.log(`📝 Generating DESIGN.md for "${resolvedSiteName}"...`);
-  const markdown = generateDesignMd(tokens, resolvedSiteName);
+  console.log(`📝 Generating DESIGN.md for "${resolvedSiteName}" (lang: ${lang})...`);
+  const markdown = generateDesignMd(tokens, resolvedSiteName, lang);
 
   // Step 4: Write DESIGN.md
   fs.writeFileSync(outputPath, markdown, 'utf-8');
@@ -99,6 +100,7 @@ async function generateDesignMdFromLocal(dir, options = {}) {
     include = [],
     exclude = [],
     outputJson = false,
+    lang = 'zh',
   } = options;
 
   // Determine output directory
@@ -118,8 +120,8 @@ async function generateDesignMdFromLocal(dir, options = {}) {
   const resolvedSiteName = siteName || tokens.meta.title || path.basename(path.resolve(dir));
 
   // Step 3: Generate DESIGN.md content
-  console.log(`📝 Generating DESIGN.md for "${resolvedSiteName}"...`);
-  const markdown = generateDesignMd(tokens, resolvedSiteName);
+  console.log(`📝 Generating DESIGN.md for "${resolvedSiteName}" (lang: ${lang})...`);
+  const markdown = generateDesignMd(tokens, resolvedSiteName, lang);
 
   // Step 4: Write DESIGN.md
   fs.writeFileSync(outputPath, markdown, 'utf-8');

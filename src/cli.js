@@ -29,6 +29,7 @@ program
   .option('-s, --screenshot', 'Save a screenshot of the homepage')
   .option('--json', 'Also output raw tokens as JSON')
   .option('-w, --wait <selector>', 'Wait for a specific CSS selector before extracting')
+  .option('-l, --lang <lang>', 'Output language: zh (Chinese) or en (English)', 'zh')
   .action(async (url, options) => {
     try {
       // Normalize URL
@@ -48,6 +49,7 @@ program
         screenshot: options.screenshot,
         outputJson: options.json,
         waitForSelector: options.wait,
+        lang: options.lang,
       });
 
       console.log(`\n✨ Done! DESIGN.md generated successfully.`);
@@ -87,6 +89,7 @@ program
   .option('-i, --include <patterns...>', 'Include only files matching these patterns')
   .option('-e, --exclude <patterns...>', 'Exclude files matching these patterns')
   .option('--json', 'Also output raw tokens as JSON')
+  .option('-l, --lang <lang>', 'Output language: zh (Chinese) or en (English)', 'zh')
   .action(async (dir, options) => {
     try {
       console.log(`\n🎨 Design MD Generator (Local mode)\n`);
@@ -104,6 +107,7 @@ program
         include: options.include || [],
         exclude: options.exclude || [],
         outputJson: options.json,
+        lang: options.lang,
       });
 
       console.log(`\n✨ Done! DESIGN.md generated successfully.`);
